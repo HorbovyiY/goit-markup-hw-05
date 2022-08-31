@@ -14,12 +14,16 @@
     /* backgrounds */
     --main-background-color: #FFFFFF;
     --secondary-background-color: #F5F4FA;
-    --dark-background-color: #2F303A;
+    --dark-background-color: #2f303a;
 
     /* others */
     --main-btn-hover: #188CE8;
     --border-color: #ECECEC;
     --icon-color: #AFB1B8;
+
+    /*  animations */
+    --time-duration: 250ms;
+    --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------------------Global styles -----------------*/
@@ -136,7 +140,22 @@ button{
 }
 
 .active{
+    position: relative;
+
     color: var(--accent-font-color);
+}
+
+.active::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-font-color);
+
 }
 
 /* -------------------------- Hero ------------------------------*/
@@ -289,6 +308,26 @@ button{
     gap: 30px;
 }
 
+.do-list-thumb{
+    position: relative;
+}
+
+.do-list-title{
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    color: var(--alternative-accent-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}
 
 /* ----------------------------- Our team ------------------------*/
 .team{
