@@ -562,7 +562,8 @@ address li:not(:last-child){
 
     opacity: 1;
 
-    transition: opacity var(--time-duration) var(--time-function);
+    transition: opacity var(--time-duration) var(--time-function), 
+                visibility var(--time-duration) var(--time-function);
 }
 
 .backdrop.is-hidden{
@@ -581,7 +582,7 @@ address li:not(:last-child){
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     width: 528px;
-    height: 281px;
+    height: 581px;
 
     background-color: var(--main-background-color);
 
